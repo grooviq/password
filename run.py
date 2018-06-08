@@ -148,4 +148,25 @@ def main():
                             save_new_cred(Credential(accountName, email, username, password))
                             print('\n')
                             print(f"Your {accountName} account has successfully been added!")
-                            print ('\n'
+                            print ('\n')
+
+                        elif short_code == 'gen':
+                            print ('\n')
+                            print("A random password will be created for this account")
+                            print("-"*30)
+
+                            print("Account Name.....")
+                            accountName = input()
+
+                            print("Email Address.....")
+                            email = input()
+
+                            print("Username.....")
+                            username = input()
+
+                            password = gen_password(username)
+                            print(f"Your password is {password}")
+                            save_new_cred(Credential(accountName, email, username, password))
+                            print('\n')
+                            print(f"Your {accountName} account addition successful!")
+                            print ('\n')
