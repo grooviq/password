@@ -26,3 +26,11 @@ class credential_test(unittest.TestCase):
     	tear down metthod that cleans up after running each testcase
     	'''
     	Credential.cred_list = []
+
+    def test_save_cred(self):
+    	"""
+        test_save_cred test case to test if the cred object is saved to
+         cred list
+        """
+        self.new_cred.save_cred()
+        self.assertEqual(len(Credential.cred_list), 1)
