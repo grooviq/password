@@ -71,3 +71,17 @@ class credential_test(unittest.TestCase):
         self.new_cred.delete_cred()
         self.assertEqual(len(Credential.cred_list), 1)
 
+    def test_gen_password(self):
+        """
+        test_gen_password to test if a user can generate a random password
+        """
+        self.new_cred.save_cred()
+        test_cred = Credential("twitter", "grooviqdeejay@gmail.com","grooviq","")
+        test_cred.password = Credential.gen_password("grooviq")
+        test_cred.save_cred()
+        self.assertTrue(len(test_cred.password) > 2)   
+
+
+if __name__ == "__main__":
+    unittest.main()
+
