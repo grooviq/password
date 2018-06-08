@@ -26,3 +26,57 @@ def find_user(username):
     Function that finds a user by username
     """
     return User.find_by_username(username)
+
+# Credential Class functions
+def create_cred(accountName, email, username, password):
+    """
+    Function to create new credentials
+    """
+    new_cred = User(accountName, email, username, password)
+    return new_cred
+
+def save_new_cred(new_cred):
+    """
+    Function to save credentials
+    """
+    new_cred.save_cred()
+
+def del_cred(cred):
+    """
+    Function to delete credentials
+    """
+    cred.delete_cred()
+
+def check_existing_cred(accountName):
+    """
+    Function that check if credentials exist with exact accountName
+    """
+    return Credential.cred_exists(accountName)
+
+def find_cred(accountName):
+    """
+    Function that finds a user's credentials by accountName and returns the credentials
+    """
+    return Credential.find_by_accountName(accountName)
+
+def gen_password(username):
+
+    return Credential.gen_password(username)
+
+def display_accounts():
+    """
+    Function that returns all the saved accounts
+    """
+    return Credential.display_accounts()
+
+# main
+
+def main():
+    print("Welcome to Password Locker")
+    print("-"*10)
+
+    while True:
+        print("Please use the following short codes:")
+        print ("si - Sign-up, lo - Login, ex - Exit")
+        print('\n')
+        short_code = input().lower()
