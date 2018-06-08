@@ -30,3 +30,12 @@ class User:
                 return True
             else:
                 return False
+
+    @classmethod
+    def find_by_username(cls,username):
+        
+        for user in cls.user_list:
+            if user.username == username:
+                return user
+            else:
+                return 0
