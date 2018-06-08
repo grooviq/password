@@ -125,3 +125,27 @@ def main():
                         add - Add to save new account's credentials, gen - Generate password for new account,
                         disp - display already saved accounts, del - Delete existing account, lt - Log out
                         """)
+
+                        short_code = input().lower()
+
+                        if short_code == 'add':
+                            print ('\n')
+                            print("Add new account")
+                            print("-"*10)
+
+                            print("Account Name.....")
+                            accountName = input()
+
+                            print("Email Address.....")
+                            email = input()
+
+                            print("Username.....")
+                            username = input()
+
+                            print("Password.....")
+                            password = input()
+
+                            save_new_cred(Credential(accountName, email, username, password))
+                            print('\n')
+                            print(f"Your {accountName} account has successfully been added!")
+                            print ('\n'
