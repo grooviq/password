@@ -1,5 +1,6 @@
-from credential import credential
-from user_login import User 
+#!/usr/bin/env python3.6
+from credential import Credential
+from user_login import User
 
 # User Class functions
 def create_user(fullname, email, username, password):
@@ -69,8 +70,7 @@ def display_accounts():
     """
     return Credential.display_accounts()
 
-# main
-
+#     def main
 def main():
     print("Welcome to Password Locker")
     print("-"*10)
@@ -80,7 +80,7 @@ def main():
         print ("si - Sign-up, lo - Login, ex - Exit")
         print('\n')
         short_code = input().lower()
-
+        
         if short_code == 'si':
             print("Sign up to create a Password Locker account")
             print("-"*20)
@@ -118,6 +118,7 @@ def main():
                 if password == user_find.password:
                     print(f"Welcome {username}, you are logged in!")
                     print ('\n')
+
 
                     while True:
                         print("Please use the following short codes:")

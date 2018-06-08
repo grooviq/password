@@ -1,5 +1,5 @@
 class User:
-	"""
+    """
     Class that generates new users login system
     """
     def __init__(self,fullname, email, username, password):
@@ -11,11 +11,13 @@ class User:
     
     user_list = []
 
+
     def save_user(self):
         """
         method that saves user object to user_list
         """
         User.user_list.append(self)
+
 
     @classmethod
     def user_exists(cls, username):
@@ -30,6 +32,8 @@ class User:
                 return True
             else:
                 return False
+
+
 
     @classmethod
     def find_by_username(cls,username):
