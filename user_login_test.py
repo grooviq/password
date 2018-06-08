@@ -31,3 +31,9 @@ class user_test(unittest.TestCase):
 
         self.new_user.save_user()
         self.assertEqual(len(User.user_list), 1)
+
+    def tearDown(self):
+        """
+        teardown method that does 'clean up' after each test case has run
+        """
+        User.user_list = []
