@@ -57,3 +57,14 @@ class Credential:
         for cred in cls.cred_list:
             if cred.accountName == accountName:
                 return cred
+    @classmethod
+    def gen_password(cls,username):
+        """
+        method to generate password randomly      
+        """
+        letters = username[1:4]
+        num1 = str(random.randint(0,9))
+        num2 = str(random.randint(9,16))
+        gen_pass = "!"+ num1 + letters + num2 + "$" + letters.upper()
+        return gen_pass
+  
