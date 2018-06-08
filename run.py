@@ -184,3 +184,13 @@ def main():
                                 print('\n')
                                 print("You dont have any contacts saved yet")
                                 print('\n')
+
+                        elif short_code == 'del':
+                            print ('\n')
+                            print("type in name of account you want deleted...")
+                            accountName = input()
+                            if find_cred(accountName):
+                                del_cred = input()
+                                print('\n')
+                                print(f"Your {accountName} account has been deleted successfully!")
+                                print ('\n')
