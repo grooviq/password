@@ -194,3 +194,15 @@ def main():
                                 print('\n')
                                 print(f"Your {accountName} account has been deleted successfully!")
                                 print ('\n')
+
+                        elif short_code == 'lt':
+                            print ('\n')
+                            print("bye-bye")
+                            print ('\n')
+                            break
+
+                        else:
+                            print ('\n')
+                            print("Please use the short codes")
+                            print ('\n')
+                            # break
