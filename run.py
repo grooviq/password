@@ -118,3 +118,10 @@ def main():
                 if password == user_find.password:
                     print(f"Welcome {username}, you are logged in!")
                     print ('\n')
+
+                    while True:
+                        print("Please use the following short codes:")
+                        print("""
+                        add - Add to save new account's credentials, gen - Generate password for new account,
+                        disp - display already saved accounts, del - Delete existing account, lt - Log out
+                        """)
