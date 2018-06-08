@@ -38,7 +38,7 @@ class user_test(unittest.TestCase):
         """
         User.user_list = []
 
-    
+
     def test_save_user(self):
         '''
         test_save_user test case to test if the user object is saved into
@@ -46,3 +46,14 @@ class user_test(unittest.TestCase):
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
+
+    def test_user_exists(self):
+        """
+        test_check_user_exists to test if a user exists or not
+        """
+        self.new_user.save_user()
+        test_user = User("victor maina","grooviqdeejay@gmail.com","grooviq","254groove")
+        test_user.save_user()
+        user_exists = User.user_exists("grooviq")
+        self.assertTrue(user_exists)
+
