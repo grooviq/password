@@ -11,3 +11,9 @@ class Credential:
         self.password = password
     
     cred_list = []
+    
+    def save_cred(self):
+        """
+        save_cred method saves user credentials into cred_list
+        """
+        Credential.cred_list.append(self)
