@@ -34,3 +34,13 @@ class credential_test(unittest.TestCase):
         """
         self.new_cred.save_cred()
         self.assertEqual(len(Credential.cred_list), 1)
+
+    def test_cred_exists(self):
+        """
+        test_profile_exist to check if there is another matching or similar profile
+        """
+        self.new_cred.save_cred()
+        test_cred = Credential("facebook", "grooviqdeejay@gmail.com","grooviq","254groove")    
+        test_cred.save_cred()
+        cred_exists = Credential.cred_exists("facebook")
+        self.assertTrue(cred_exists)
