@@ -170,3 +170,17 @@ def main():
                             print('\n')
                             print(f"Your {accountName} account addition successful!")
                             print ('\n')
+
+                        elif short_code == 'disp':
+                            if display_accounts():
+                                print ('\n')
+                                print("Here are your saved accounts")
+                                print('\n')
+
+                                for cred in display_accounts():
+                                    print(f"{cred.accountName}, {cred.email}, {cred.username}, {cred.password}")
+                                    print('\n')
+                            else:
+                                print('\n')
+                                print("You dont have any contacts saved yet")
+                                print('\n')
