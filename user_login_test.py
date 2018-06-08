@@ -68,5 +68,8 @@ class user_test(unittest.TestCase):
         found_user = User.find_by_username("grooviq")
         self.assertEqual(found_user.password,test_user.password
 
+if __name__ == '__main__':
+    unittest.main()
+
 
 
