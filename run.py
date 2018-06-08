@@ -206,3 +206,20 @@ def main():
                             print("Please use the short codes")
                             print ('\n')
                             # break
+
+                    else:
+                        print("Incorrect password")
+                        print ('\n')
+
+                else:
+                    print(f"{username} does not exist, please sign up.")
+        elif short_code == 'ex':
+            print("\n")
+            print("..Exiting..")
+            print("\n")
+            break
+        else:
+            print("Please use the short codes")
+
+if __name__ == '__main__':
+    main()
