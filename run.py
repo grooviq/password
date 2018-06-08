@@ -101,3 +101,20 @@ def main():
             print('\n')
             print(f"Welcome {username}, your account has successfully been created")
             print ('\n')
+
+        elif short_code == 'lo':
+            print("Login to your Password Locker account")
+            print("-"*20)
+
+            # while True:
+
+            print("Username.....")
+            search_user = input()
+            if check_existing_user(search_user):
+                user_find = find_user(search_user)
+                # while True:
+                print(" Input Password.....")
+                password = input()
+                if password == user_find.password:
+                    print(f"Welcome {username}, you are logged in!")
+                    print ('\n')
