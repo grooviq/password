@@ -22,3 +22,12 @@ class user_test(unittest.TestCase):
         self.assertEqual(self.new_user.email,"grooviqdeejay@gmail.com")
         self.assertEqual(self.new_user.username, "grooviq")
         self.assertEqual(self.new_user.password, "254groove")
+
+    def test_create_new_account(self):
+        """
+        test_create_new_account test case to test if the new user is
+        saved to user list
+        """
+
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list), 1)
