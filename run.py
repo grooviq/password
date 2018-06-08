@@ -80,3 +80,24 @@ def main():
         print ("si - Sign-up, lo - Login, ex - Exit")
         print('\n')
         short_code = input().lower()
+
+        if short_code == 'si':
+            print("Sign up to create a Password Locker account")
+            print("-"*20)
+
+            print("Fullname.....")
+            fullname = input()
+
+            print("Email Address.....")
+            email = input()
+
+            print("Username.....")
+            username = input()
+
+            print("Password.....")
+            password = input()
+
+            save_new_user(User(fullname, email, username, password))
+            print('\n')
+            print(f"Welcome {username}, your account has successfully been created")
+            print ('\n')
