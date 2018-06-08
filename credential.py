@@ -39,3 +39,9 @@ class Credential:
         """
         Credential.cred_list.remove(self)
 
+    @classmethod
+    def display_accounts(cls):
+        """
+        method that returns the cred list
+        """
+        return cls.cred_list
