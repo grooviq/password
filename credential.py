@@ -45,3 +45,15 @@ class Credential:
         method that returns the cred list
         """
         return cls.cred_list
+
+    @classmethod
+    def find_by_accountName(cls,accountName):
+        """
+        Method that takes in an account name and returns matching credentials
+        
+        
+        """
+
+        for cred in cls.cred_list:
+            if cred.accountName == accountName:
+                return cred
