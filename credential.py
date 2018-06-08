@@ -32,3 +32,10 @@ class Credential:
                 return True
             else:
                 return False 
+
+    def delete_cred(self):
+        """
+        delete_profile method that deletes a specified profile
+        """
+        Credential.cred_list.remove(self)
+
