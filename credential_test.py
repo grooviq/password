@@ -54,3 +54,10 @@ class credential_test(unittest.TestCase):
         test_cred.save_cred()
         found_cred = Credential.find_by_accountName("facebook")
         self.assertEqual(found_cred.accountName,test_cred.accountName)
+
+    def test_display_all_credentials(self):
+        """
+        test to check display all user accounts s
+        """
+        self.assertEqual(Credential.display_accounts(), Credential.cred_list)
+
