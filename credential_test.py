@@ -44,3 +44,13 @@ class credential_test(unittest.TestCase):
         test_cred.save_cred()
         cred_exists = Credential.cred_exists("facebook")
         self.assertTrue(cred_exists)
+
+    def test_find_cred_by_accountName(self):
+        """
+        test to check if we can find user credentials by accountName
+        """
+        self.new_cred.save_cred()
+        test_cred = Credential("facebook", "grooviqdeejay@gmail.com","grooviq","254groove")
+        test_cred.save_cred()
+        found_cred = Credential.find_by_accountName("facebook")
+        self.assertEqual(found_cred.accountName,test_cred.accountName)
