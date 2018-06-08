@@ -61,3 +61,13 @@ class credential_test(unittest.TestCase):
         """
         self.assertEqual(Credential.display_accounts(), Credential.cred_list)
 
+    def test_delete_credentials(self):
+        """
+        test_delete_profile to test deletion of user profile
+        """
+        self.new_cred.save_cred()
+        test_cred = Credential("facebook", "grooviqdeejay@gmail.com","grooviq","254groove")
+        test_cred.save_cred()
+        self.new_cred.delete_cred()
+        self.assertEqual(len(Credential.cred_list), 1)
+
